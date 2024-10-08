@@ -135,6 +135,9 @@ exit
 sed "/docker.io\/library\/rust/s/bookworm/${OS_VERSION_NAME}/g" -i "$DIR/Dockerfile"
 sed "/docker.io\/library\/debian/s/bookworm/${OS_VERSION_NAME}/g" -i "$DIR/Dockerfile"
 
+# add debian dir to .dockerignore whitelisting
+echo "!debian" >> $SRC/.dockerignore
+
 # Prepare Controlfile
 CONTROL="$DEBIANDIR/control"
 cp "$DIR/control.dist" "$CONTROL"
