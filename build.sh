@@ -51,7 +51,7 @@ case $OS_VERSION_NAME in
     VAULTWARDEN_DEPS="$VAULTWARDEN_DEPS, libssl1.1"
     ;;
 
-  bookworm)
+  bookworm|trixie)
     VAULTWARDEN_DEPS="$VAULTWARDEN_DEPS, libssl3"
     ;;
 
